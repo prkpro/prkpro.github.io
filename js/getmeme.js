@@ -2,8 +2,7 @@ async function getmeme(url) {
   let response = await fetch(url);
   let data = await response.json();
   console.log(data);
-  return data.value;
+  return (document.getElementById("chucknorris").innerHTML =
+    "Chuck Norris Fact of the day: " + data.value);
 }
-document.getElementById("chucknorris").innerHTML = getmeme(
-  "https://api.chucknorris.io/jokes/random"
-);
+getmeme("https://api.chucknorris.io/jokes/random");
