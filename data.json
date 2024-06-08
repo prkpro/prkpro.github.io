@@ -1,0 +1,61 @@
+{
+    "personal_details": {
+        "job_title": "Senior Cloud Data Engineer",
+        "full_name": "Prakash Pandey",
+        "email": "prakashpro86@gmail.com",
+        "phone": "7355105172"
+    },
+    "professional_summary": "4+ years experience in Data and Cloud Engineering, building data-intensive applications, tackling challenging architectural and scalability problems, designing, testing, and maintenance of software systems in Retails and Sales domain.Experienced with the latest cutting-edge development tools and procedures. Able to effectively self-manage during independent projects, as well as collaborate as part of a productive team.",
+    "experience": {
+        "n": {
+            "job_title": "Senior Software Engineer - Data",
+            "employer": "ACL Digital",
+            "start": "Apr, 2023",
+            "end": "",
+            "loc": "Bengaluru",
+            "desc": [
+                "Implement Core data processing framework in Javascript for semi-structured data migration and parsing from S3 buckets to Snowflake database supporting 500+ tables",
+                "Developed an ETL process to transform data from multiple sources and load it into a data warehouse",
+                "Improved and refactored pipeline to dynamically increment path in S3",
+                "Developed a data quality framework to standardize and validate data"
+            ]
+        },
+        "2":{
+            "job_title": "Data Analyst, Engineering",
+            "employer": "Denave",
+            "start": "Feb, 2020",
+            "end": "Dec, 2021",
+            "loc": "Delhi NCR",
+            "desc": [
+                "Implemented Private API Gateway with Oauth2 authorization using lambda authorizer",
+                "Integrated Kafka REST interface on an ECS cluster for producing messages to Kafka topics",
+                "Built an ETL framework for batch pipelines. Streamlined usage by introducing a 3 file method (Config, Airflow DAG, and ETL script) thus reducing ETL work",
+                "Build a secrets rotation module using AWS Secrets manager and event bridge",
+                "Built a data model from scratch sourcing from real-time Kafka streams for retail data in Snowflake DB"
+            ]
+        },
+        "1":{
+            "job_title": "Database Analyst",
+            "employer": "Denave",
+            "start": "Nov, 2018",
+            "end": "Feb, 2020",
+            "loc": "Delhi NCR",
+            "desc": [
+                "Built Data Warehouse with in-depth data validation on data from various sales channels across the world",
+                "Prepared datasets for predicting sales using ARIMA model",
+                "Prepare and optimized Spark Jobs for batch processes",
+                "Developed an automated data cleansing process to reduce manual errors and improve data quality",
+                "Developed a data visualization dashboard that enabled users to quickly view and understand complex datasets"
+            ]
+        }
+    },
+    "education": {
+        "college": "Lovely Professional University",
+        "degree": "Bachelor in Electronics and Communication Engineering",
+        "start": "Aug, 2014",
+        "end": "June, 2018"
+    },
+    "skills": {
+        
+    }
+}

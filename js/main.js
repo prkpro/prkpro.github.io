@@ -1,106 +1,149 @@
-(function ($) {
-  "use strict";
+;(function () {
+	
+	'use strict';
 
-  // loader
-  var loader = function () {
-    setTimeout(function () {
-      if ($("#loader").length > 0) {
-        $("#loader").removeClass("show");
-      }
-    }, 1);
-    $("#name").append("Prakash"); //This is how we add variables in index
-  };
-  loader();
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+			BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+			iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+			Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+			Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+			any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
 
-  // Initiate the wowjs
-  new WOW().init();
+	
+	var fullHeight = function() {
 
-  // Back to top button
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
-      $(".back-to-top").fadeIn("slow");
-    } else {
-      $(".back-to-top").fadeOut("slow");
-    }
-  });
-  $(".back-to-top").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
-    return false;
-  });
+		if ( !isMobile.any() ) {
+			$('.js-fullheight').css('height', $(window).height());
+			$(window).resize(function(){
+				$('.js-fullheight').css('height', $(window).height());
+			});
+		}
+	};
 
-  // Sticky Navbar
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 0) {
-      $(".navbar").addClass("nav-sticky");
-    } else {
-      $(".navbar").removeClass("nav-sticky");
-    }
-  });
+	// Parallax
+	var parallax = function() {
+		$(window).stellar();
+	};
 
-  // Smooth scrolling on the navbar links
-  $(".navbar-nav a").on("click", function (event) {
-    if (this.hash !== "") {
-      event.preventDefault();
+	var contentWayPoint = function() {
+		var i = 0;
+		$('.animate-box').waypoint( function( direction ) {
 
-      $("html, body").animate(
-        {
-          scrollTop: $(this.hash).offset().top - 45,
-        },
-        1500,
-        "easeInOutExpo"
-      );
+			if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
+				
+				i++;
 
-      if ($(this).parents(".navbar-nav").length) {
-        $(".navbar-nav .active").removeClass("active");
-        $(this).closest("a").addClass("active");
-      }
-    }
-  });
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
 
-  // Typed Initiate
-  if ($(".hero .hero-text h2").length == 1) {
-    var typed_strings = $(".hero .hero-text .typed-text").text();
-    var typed = new Typed(".hero .hero-text h2", {
-      strings: typed_strings.split(", "),
-      typeSpeed: 100,
-      backSpeed: 20,
-      smartBackspace: false,
-      loop: true,
-    });
-  }
+					$('body .animate-box.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							var effect = el.data('animate-effect');
+							if ( effect === 'fadeIn') {
+								el.addClass('fadeIn animated-fast');
+							} else if ( effect === 'fadeInLeft') {
+								el.addClass('fadeInLeft animated-fast');
+							} else if ( effect === 'fadeInRight') {
+								el.addClass('fadeInRight animated-fast');
+							} else {
+								el.addClass('fadeInUp animated-fast');
+							}
 
-  // Skills
-  $(".skills").waypoint(
-    function () {
-      $(".progress .progress-bar").each(function () {
-        $(this).css("width", $(this).attr("aria-valuenow") + "%");
-      });
-    },
-    { offset: "80%" }
-  );
+							el.removeClass('item-animate');
+						},  k * 100, 'easeInOutExpo' );
+					});
+					
+				}, 50);
+				
+			}
 
-  // Testimonials carousel
-  $(".testimonials-carousel").owlCarousel({
-    center: true,
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-    },
-  });
+		} , { offset: '85%' } );
+	};
 
-  // Portfolio filter
-  var portfolioIsotope = $(".portfolio-container").isotope({
-    itemSelector: ".portfolio-item",
-    layoutMode: "fitRows",
-  });
 
-  $("#portfolio-filter li").on("click", function () {
-    $("#portfolio-filter li").removeClass("filter-active");
-    $(this).addClass("filter-active");
-    portfolioIsotope.isotope({ filter: $(this).data("filter") });
-  });
-})(jQuery);
+
+	var goToTop = function() {
+
+		$('.js-gotop').on('click', function(event){
+			
+			event.preventDefault();
+
+			$('html, body').animate({
+				scrollTop: $('html').offset().top
+			}, 500, 'easeInOutExpo');
+			
+			return false;
+		});
+
+		$(window).scroll(function(){
+
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$('.js-top').addClass('active');
+			} else {
+				$('.js-top').removeClass('active');
+			}
+
+		});
+	
+	};
+
+	var pieChart = function() {
+		$('.chart').easyPieChart({
+			scaleColor: false,
+			lineWidth: 4,
+			lineCap: 'butt',
+			barColor: '#FF9000',
+			trackColor:	"#f5f5f5",
+			size: 160,
+			animate: 1000
+		});
+	};
+
+	var skillsWayPoint = function() {
+		if ($('#fh5co-skills').length > 0 ) {
+			$('#fh5co-skills').waypoint( function( direction ) {
+										
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+					setTimeout( pieChart , 400);					
+					$(this.element).addClass('animated');
+				}
+			} , { offset: '90%' } );
+		}
+
+	};
+
+
+	// Loading page
+	var loaderPage = function() {
+		$(".fh5co-loader").fadeOut("slow");
+	};
+
+	
+	$(function(){
+		contentWayPoint();
+		goToTop();
+		loaderPage();
+		fullHeight();
+		parallax();
+		// pieChart();
+		skillsWayPoint();
+	});
+
+
+}());
