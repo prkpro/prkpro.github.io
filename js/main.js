@@ -120,8 +120,8 @@
   };
 
   var skillsWayPoint = function () {
-    if ($("#fh5co-skills").length > 0) {
-      $("#fh5co-skills").waypoint(
+    if ($("#prk-skills").length > 0) {
+      $("#prk-skills").waypoint(
         function (direction) {
           if (direction === "down" && !$(this.element).hasClass("animated")) {
             setTimeout(pieChart, 400);
@@ -135,8 +135,36 @@
 
   // Loading page
   var loaderPage = function () {
-    $(".fh5co-loader").fadeOut("slow");
+    $(".prk-loader").fadeOut("slow");
   };
+  // Sticky Navbar
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 0) {
+      $(".navbar").addClass("nav-sticky");
+    } else {
+      $(".navbar").removeClass("nav-sticky");
+    }
+  });
+
+  // Smooth scrolling on the navbar links
+  $(".navbar-nav a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      $("html, body").animate(
+        {
+          scrollTop: $(this.hash).offset().top - 45,
+        },
+        1500,
+        "easeInOutExpo"
+      );
+
+      if ($(this).parents(".navbar-nav").length) {
+        $(".navbar-nav .active").removeClass("active");
+        $(this).closest("a").addClass("active");
+      }
+    }
+  });
 
   $(function () {
     contentWayPoint();
