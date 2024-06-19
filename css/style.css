@@ -1387,6 +1387,29 @@
   .row-pb-sm {
     padding-bottom: 2em !important;
   }
+
+  .row-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    
+    .col-md-4 {
+      flex: 0 0 auto;
+      margin-right: 3px;
+      scroll-snap-align: center;
+    }
+  }
+  
+  .row-scroll {
+    height: auto;
+    margin-bottom:auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
   
   .nopadding {
     padding: 0 !important;
