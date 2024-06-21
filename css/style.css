@@ -5,6 +5,17 @@
     font-weight: normal;
     font-style: normal;
   }
+  :root {
+    --clr-dark: #222;
+    --clr-light: #e6e6e6;
+
+  }
+  
+  .dark-mode {
+    --clr-light: #222;
+    --clr-dark: #e6e6e6;
+  }
+  
   /* =======================================================
   *
   * 	Template Style 
@@ -15,10 +26,26 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #4d4d4d;
-    background: #fff;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
   }
   
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    position:fixed;
+    top:28px;
+    right: 10px;
+  }
+
+  .theme-toggle {
+    width: 5rem;
+    height: 5rem;
+  }
+
   #page {
     position: relative;
     overflow-x: hidden;
@@ -322,6 +349,18 @@
     float: left;
   }
 
+  .darkmodebutton {
+    position: fixed;
+    top: 25px;
+    right: 40px;
+    z-index: 999;
+    opacity: 1;
+    visibility:visible;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
@@ -438,7 +477,6 @@
         box-shadow: none;
     }
 }
-
 
 
   @media screen and (max-width: 768px) {

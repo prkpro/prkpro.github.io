@@ -50,7 +50,8 @@
     <div class="navbar navbar-expand-lg bg-light navbar-light">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand">Portfolio</a>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="collapse navbar-expand-lg navbar-collapse justify-content-between darkmodebutton"
+                id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
                     <a href="#prk-header" class="nav-item nav-link active">Home</a>
                     <a href="#prk-about" class="nav-item nav-link">About</a>
@@ -60,8 +61,19 @@
                     <a href="#prk-work" class="nav-item nav-link">Work</a>
                     <a href="#prk-blog" class="nav-item nav-link">Blog</a>
                     <a href="#prk-started" class="nav-item nav-link">Contact</a>
+                    <!-- <div class="darkmodebutton"> -->
+                    <!-- <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a> -->
+                    <button class="navbar-collapse theme-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                        </svg>
+                    </button>
+                    <!-- </div> -->
                 </div>
+
             </div>
+
         </div>
     </div>
     <!-- Nav Bar End -->
@@ -610,7 +622,7 @@
             </div>
         </div>
 
-        <!-- <div id="prk-consult">
+        <div id="prk-consult">
             <div class="video prk-video" style="background-image: url(images/cover_bg_1.jpg);">
                 <div class="overlay"></div>
             </div>
@@ -675,6 +687,8 @@
 
             <!-- jQuery -->
             <script src="js/jquery.min.js"></script>
+            <!-- Tailwind -->
+            <script src="https://cdn.tailwindcss.com"></script>
             <!-- jQuery Easing -->
             <script src="js/jquery.easing.1.3.js"></script>
             <!-- Bootstrap -->
@@ -690,9 +704,10 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<script src="js/google_map.js"></script> -->
             <!-- Contact Me -->
-            <script src="js/mail/jqBootstrapValidation.min.js"></script>
-            <script src="js/mail/contact.js"></script>
+            <!-- <script src="js/mail/jqBootstrapValidation.min.js"></script>
+            <script src="js/mail/contact.js"></script> -->
             <script src="js/getmeme.js"></script>
+            <script src="js/utils/darkmode.js"></script>
             <!-- Main -->
             <script src="js/main.js"></script>
 
