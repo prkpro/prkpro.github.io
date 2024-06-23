@@ -44,8 +44,26 @@
   .theme-toggle {
     width: 5rem;
     height: 5rem;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+  }
+  
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    position:fixed;
+    top:28px;
+    right: 10px;
   }
 
+  .theme-toggle {
+    width: 5rem;
+    height: 5rem;
+  }
+  
   #page {
     position: relative;
     overflow-x: hidden;
@@ -477,6 +495,7 @@
         box-shadow: none;
     }
 }
+
 
 
   @media screen and (max-width: 768px) {
