@@ -3,6 +3,6 @@ async function getmeme(url) {
   let data = await response.json();
   console.log(data);
   return (document.getElementById("chucknorris").innerHTML =
-    "Chuck Norris Fact of the day: " + data.value);
+    "<i>Chuck Norris Fact of the day: " + data.value + "</i>");
 }
 getmeme("https://api.chucknorris.io/jokes/random");
