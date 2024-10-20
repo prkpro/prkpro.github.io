@@ -1,143 +1,152 @@
 {
-    "personal_details": {
-        "job_title": "Senior Cloud Data Engineer",
-        "full_name": "Prakash Pandey",
-        "email": "prakashpro86@gmail.com",
-        "phone": "7355105172"
+    "name": "Prakash Pandey",
+    "landing": {
+        "title": "Hi, I'm Prakash",
+        "subtitles": [
+            "Data Warehousing and Integration 🌐",
+            "Cloud Migration and Development 📱💻",
+            "Batch and Streaming platform ☁️"
+        ],
+        "professionalDetails": [
+            {
+                "alt": "prkaashpaandey",
+                "icon": "linkedin",
+                "link": "https://www.linkedin.com/in/prkaashpaandey/"
+            },
+            {
+                "alt": "prakashpro86",
+                "icon": "medium",
+                "link": "https://medium.com/@prakashpro86"
+            },
+            {
+                "alt": "prkashp",
+                "icon": "github",
+                "link": "https://github.com/prkashp/"
+            },
+            {
+                "alt": "Email",
+                "icon": "gmail",
+                "link": "mailto:prakashpro86@gmail.com"
+            }
+        ]
     },
-    "professional_summary": "With over 4 years of robust experience in data and cloud engineering, I specialize in developing data-intensive applications, tackling complex architectural and scalability challenges, and designing and testing robust data software systems. Passionate about leveraging cutting-edge development tools and methodologies to deliver scalable and innovative solutions that drive business growth. Beyond data engineering, I enjoy exploring new technologies, writing blogs, playing instruments, and of course, cracking jokes.",
-    "experience": [
-        {
-            "job_title": "Senior Software Engineer - Data",
-            "employer": "ACL Digital",
-            "start": "Apr, 2023",
-            "end": "Sept, 2024",
-            "loc": "Bengaluru",
-            "desc": "Owner of Core data processing frameworks utilizing Kafka and Snowflake used by 500+ tables and innovation stories. Handled multiple semi-structured data sources with SLA of less than 3 hours."
-        },
-        {
-            "job_title": "Software Engineer - Frontend",
-            "employer": "Ugam",
-            "start": "Dec, 2021",
-            "end": "Mar, 2023",
-            "loc": "Bengaluru",
-            "desc": "Designing intuitive user interfaces and robust backend APIs for optimized performance and seamless integration."
-        },
-        {
-            "job_title": "Data Analyst, Engineering",
-            "employer": "Denave",
-            "start": "Feb, 2020",
-            "end": "Dec, 2021",
-            "loc": "Delhi NCR",
-            "desc": "Owned core kafka streams processing module with ultra-low SLA of 5 secs and developed data models in Snowflake for aggregate reports."
-        },
-        {
-            "job_title": "Database Analyst",
-            "employer": "Denave",
-            "start": "Nov, 2018",
-            "end": "Feb, 2020",
-            "loc": "Delhi NCR",
-            "desc": "Developed automation data migration pipelines with processing jobs in Spark."
-        }
-    ],
-    "education": {
-        "degree": {
-            "college": "Lovely Professional University",
-            "desc": "Bachelor in Electronics and Communication Engineering",
-            "start": "Aug, 2014",
-            "end": "June, 2018"
-        },
-        "course": {
-            "college": "IIT Madras",
-            "desc": "Data Structures and Algorithm in Python",
-            "start": "2015",
-            "end": "2015"
-        }
+    "skills": {
+        "Languages known": [
+            "Python",
+            "JavaScript",
+            "Bash",
+            "Java",
+            "SQL"
+        ],
+        "Platform used": [
+            "Kafka",
+            "Snowflake",
+            "AWS",
+            "Spark"
+        ],
+        "Database": [
+            "Cassandra",
+            "PostgreSQL",
+            {
+                "alt": "Azure",
+                "icon": "microsoftazure"
+            }
+        ],
+        "CICD and Management": [
+            {
+                "alt": "React_Native",
+                "icon": "react",
+                "backgroundColor": "#424242"
+            },
+            "Gitlab CI",
+            "Github",
+            "Jenkins"
+        ]
     },
-    "services": [
-        {
-            "name": "Data Warehousing",
-            "desc": "Empowering businesses with tailored data warehouse solutions for actionable insights."
+    "projects": {
+        "baseURI": "https://api.github.com/repos/prkashp/",
+        "repositories": [
+            "Wikimedia",
+            "metaflake",
+            "acid-view"
+        ]
+    },
+    "experience": {
+        "Work Experience": [
+            {
+                "organization": "ACL Digital",
+                "role": "Senior Software Engineer - Data",
+                "type": "Full Time",
+                "startDate": "2023-04-12",
+                "endDate": "2024-09-30",
+                "city": "Bengaluru",
+                "state": "Karnataka",
+                "country": "India",
+                "url": "https://www.linkedin.com/company/acl-digital/",
+                "thumbnail": "https://media.licdn.com/dms/image/v2/C560BAQFYnXRZomIaNQ/company-logo_200_200/company-logo_200_200/0/1630664946745?e=1737590400&v=beta&t=Az_JY5jFk601R0fjBUnGJRSOrl24N_8AXFiZvH0kk78"
+            },
+            {
+                "organization": "Ugam Solutions",
+                "role": "Software Engineer",
+                "type": "Full Time",
+                "startDate": "2021-12-14",
+                "endDate": "2023-03-21",
+                "city": "Bengaluru",
+                "state": "Karnataka",
+                "country": "India",
+                "url": "https://www.linkedin.com/company/ugam/",
+                "thumbnail": "https://media.licdn.com/dms/image/v2/C560BAQFqsyPGg8alHA/company-logo_200_200/company-logo_200_200/0/1630636455480/ugam_logo?e=1737590400&v=beta&t=CNERSIwUA3Oa3LuM4ub09ndr3OENc_kjBaetqpdA4L0"
+            },
+            {
+                "organization": "Denave",
+                "role": "Data Analyst",
+                "type": "Full Time",
+                "startDate": "2020-02-17",
+                "endDate": "2021-12-10",
+                "city": "Noida",
+                "state": "Uttar Pradesh",
+                "country": "India",
+                "url": "https://www.linkedin.com/company/denave/",
+                "thumbnail": "https://media.licdn.com/dms/image/v2/C4D0BAQFjoNWs2-yHEA/company-logo_200_200/company-logo_200_200/0/1673507329219/denave_logo?e=1737590400&v=beta&t=JhNiSFr4H60DmxanXV_x8NQBzI3G4Bku7Ij7yk-EEJ0"
+            },
+            {
+                "organization": "Wipro",
+                "role": "Associate Analyst",
+                "type": "Full Time",
+                "startDate": "2018-11-01",
+                "endDate": "2020-02-14",
+                "city": "Noida",
+                "state": "Uttar Pradesh",
+                "country": "India",
+                "url": "https://www.linkedin.com/company/wipro/",
+                "thumbnail": "https://media.licdn.com/dms/image/v2/D560BAQEyHRAMazda_g/company-logo_200_200/company-logo_200_200/0/1727788622013/wipro_logo?e=1737590400&v=beta&t=rG2RnHrVp4W24EOJYd0gM6o1CLaHbKRWVCJm44mJ2Po"
+            }
+        ],
+        "Volunteer Experience": []
+    },
+    "about": {
+        "description": "With over 5 years of robust experience in data and cloud engineering, I specialize in developing data-intensive applications, tackling complex architectural and scalability challenges, and designing and testing robust data software systems. Passionate about leveraging cutting-edge development tools and methodologies to deliver scalable and innovative solutions that drive business growth. Beyond data engineering, I enjoy exploring new technologies, writing blogs, playing instruments, and of course, cracking jokes. ",
+        "picture": "/profile.JPG",
+        "social": []
+    },
+    "theme": {
+        "light": {
+            "palette": {
+                "type": "light",
+                "background": {
+                    "paper": "#fff",
+                    "default": "#fafafa"
+                }
+            }
         },
-        {
-            "name": "Cloud Migration",
-            "desc": "Seamlessly transitioning businesses to the cloud for enhanced scalability and efficiency."
-        },
-        {
-            "name": "Data Integration",
-            "desc": "Specializing in seamless data integration solutions tailored to optimize business operations."
-        },
-        {
-            "name": "API Development",
-            "desc": "Develop scalable APIs tailored to client specifications, ensuring seamless integration and optimal performance."
-        },
-        {
-            "name": "Data Apps",
-            "desc": "Craft data-driven applications that enhance business insights and operational efficiency."
-        },
-        {
-            "name": "Consult",
-            "desc": "Optimize business operations through expert consultation on data management and cloud solutions."
+        "dark": {
+            "palette": {
+                "type": "dark",
+                "background": {
+                    "paper": "#303030",
+                    "default": "#212121"
+                }
+            }
         }
-    ],
-    "skills": [
-        {
-            "name": "Kafka",
-            "%": 85
-        },
-        {
-            "name": "Snowflake",
-            "%": 90
-        },
-        {
-            "name": "Python",
-            "%": 90
-        },
-        {
-            "name": "Javascript",
-            "%": 85
-        },
-        {
-            "name": "AWS",
-            "%": 90
-        },
-        {
-            "name": "Postgres",
-            "%": 85
-        },
-        {
-            "name": "Bash",
-            "%": 90
-        },
-        {
-            "name": "CICD",
-            "%": 80
-        },
-        {
-            "name": "Kafka",
-            "%": 95
-        }
-    ],
-    "projects": [
-        {
-            "name": "Techgik",
-            "desc": "API backend",
-            "link": "https://techgik.com/"
-        },
-        {
-            "name": "WikiMedia",
-            "desc": "Kafka Pipeline",
-            "link": "https://github.com/prkashp/Wikimedia"
-        },
-        {
-            "name": "Notes Transpose",
-            "desc": "Hobby",
-            "link": "https://github.com/prkpro/Notes_Transpose"
-        },
-        {
-            "name": "Basic Streams App",
-            "desc": "Kafka Pipeline",
-            "link": "https://github.com/prkashp/kafka-streams-app-with-contracts"
-        }
-    ]
+    }
 }

@@ -1,51 +1,43 @@
-import '../styles/globals.css'
-import { ThemeProvider } from "styled-components"
-import { useState, useEffect } from "react"
-import { GlobalStyles } from "../ThemeConfig"
-import { lightTheme, darkTheme } from "../Constants/theme"
-import Layout from '../Layout';
-import { ChakraProvider } from "@chakra-ui/react"
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import Head from 'next/head';
+import { MuiThemeProvider, useMediaQuery, CssBaseline } from '@material-ui/core';
+import { darkTheme, lightTheme } from '../src/theme';
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
 
-  const [theme, setTheme] = useState("light")
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+  const [theme, setTheme] = useState(
+    prefersDarkMode ? darkTheme : lightTheme
+  )
 
   useEffect(() => {
-    if (localStorage.getItem('theme')) {
-      setTheme(localStorage.getItem('theme'))
-    } else {
-      setTheme('light')
+    setTheme(prefersDarkMode ? darkTheme : lightTheme)
+  }, [prefersDarkMode])
+
+  useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
     }
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem('theme', theme);
-  }, [theme])
-
-  useEffect(() => {
-    AOS.init({
-      duration: 500
-    });
   }, []);
 
-  const toggleTheme = () => {
-    theme == 'light' ? setTheme('dark') : setTheme('light')
-  }
-
-  const currentTheme = theme === 'light' ? lightTheme : darkTheme
-
   return (
-    <ChakraProvider>
-      <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
-        <GlobalStyles />
-        <Layout toggleTheme={toggleTheme} currentTheme={currentTheme}>
-          <Component {...pageProps} currentTheme={currentTheme} />
-        </Layout>
-      </ThemeProvider>
-    </ChakraProvider>
-  )
+    <React.Fragment>
+      <Head>
+        <title>Kaustubh Odak</title>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+      </Head>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} setTheme={setTheme}/>
+      </MuiThemeProvider>
+    </React.Fragment>
+  );
 }
 
-export default MyApp
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};

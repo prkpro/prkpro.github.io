@@ -1,0 +1,143 @@
+{
+    "personal_details": {
+        "job_title": "Senior Cloud Data Engineer",
+        "full_name": "Prakash Pandey",
+        "email": "prakashpro86@gmail.com",
+        "phone": "7355105172"
+    },
+    "professional_summary": "With over 4 years of robust experience in data and cloud engineering, I specialize in developing data-intensive applications, tackling complex architectural and scalability challenges, and designing and testing robust data software systems. Passionate about leveraging cutting-edge development tools and methodologies to deliver scalable and innovative solutions that drive business growth. Beyond data engineering, I enjoy exploring new technologies, writing blogs, playing instruments, and of course, cracking jokes.",
+    "experience": [
+        {
+            "job_title": "Senior Software Engineer - Data",
+            "employer": "ACL Digital",
+            "start": "Apr, 2023",
+            "end": "Sept, 2024",
+            "loc": "Bengaluru",
+            "desc": "Owner of Core data processing frameworks utilizing Kafka and Snowflake used by 500+ tables and innovation stories. Handled multiple semi-structured data sources with SLA of less than 3 hours."
+        },
+        {
+            "job_title": "Software Engineer - Frontend",
+            "employer": "Ugam",
+            "start": "Dec, 2021",
+            "end": "Mar, 2023",
+            "loc": "Bengaluru",
+            "desc": "Designing intuitive user interfaces and robust backend APIs for optimized performance and seamless integration."
+        },
+        {
+            "job_title": "Data Analyst, Engineering",
+            "employer": "Denave",
+            "start": "Feb, 2020",
+            "end": "Dec, 2021",
+            "loc": "Delhi NCR",
+            "desc": "Owned core kafka streams processing module with ultra-low SLA of 5 secs and developed data models in Snowflake for aggregate reports."
+        },
+        {
+            "job_title": "Database Analyst",
+            "employer": "Denave",
+            "start": "Nov, 2018",
+            "end": "Feb, 2020",
+            "loc": "Delhi NCR",
+            "desc": "Developed automation data migration pipelines with processing jobs in Spark."
+        }
+    ],
+    "education": {
+        "degree": {
+            "college": "Lovely Professional University",
+            "desc": "Bachelor in Electronics and Communication Engineering",
+            "start": "Aug, 2014",
+            "end": "June, 2018"
+        },
+        "course": {
+            "college": "IIT Madras",
+            "desc": "Data Structures and Algorithm in Python",
+            "start": "2015",
+            "end": "2015"
+        }
+    },
+    "services": [
+        {
+            "name": "Data Warehousing",
+            "desc": "Empowering businesses with tailored data warehouse solutions for actionable insights."
+        },
+        {
+            "name": "Cloud Migration",
+            "desc": "Seamlessly transitioning businesses to the cloud for enhanced scalability and efficiency."
+        },
+        {
+            "name": "Data Integration",
+            "desc": "Specializing in seamless data integration solutions tailored to optimize business operations."
+        },
+        {
+            "name": "API Development",
+            "desc": "Develop scalable APIs tailored to client specifications, ensuring seamless integration and optimal performance."
+        },
+        {
+            "name": "Data Apps",
+            "desc": "Craft data-driven applications that enhance business insights and operational efficiency."
+        },
+        {
+            "name": "Consult",
+            "desc": "Optimize business operations through expert consultation on data management and cloud solutions."
+        }
+    ],
+    "skills": [
+        {
+            "name": "Kafka",
+            "%": 85
+        },
+        {
+            "name": "Snowflake",
+            "%": 90
+        },
+        {
+            "name": "Python",
+            "%": 90
+        },
+        {
+            "name": "Javascript",
+            "%": 85
+        },
+        {
+            "name": "AWS",
+            "%": 90
+        },
+        {
+            "name": "Postgres",
+            "%": 85
+        },
+        {
+            "name": "Bash",
+            "%": 90
+        },
+        {
+            "name": "CICD",
+            "%": 80
+        },
+        {
+            "name": "Kafka",
+            "%": 95
+        }
+    ],
+    "projects": [
+        {
+            "name": "Techgik",
+            "desc": "API backend",
+            "link": "https://techgik.com/"
+        },
+        {
+            "name": "WikiMedia",
+            "desc": "Kafka Pipeline",
+            "link": "https://github.com/prkashp/Wikimedia"
+        },
+        {
+            "name": "Notes Transpose",
+            "desc": "Hobby",
+            "link": "https://github.com/prkpro/Notes_Transpose"
+        },
+        {
+            "name": "Basic Streams App",
+            "desc": "Kafka Pipeline",
+            "link": "https://github.com/prkashp/kafka-streams-app-with-contracts"
+        }
+    ]
+}

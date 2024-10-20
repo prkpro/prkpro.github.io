@@ -1,6 +1,11 @@
-module.exports = {
-  reactStrictMode: true,
-  images: {
-    domains: ['cdn-images-1.medium.com', 'miro.medium.com', 'res.cloudinary.com'],
-  },
-}
+const withPWA = require('next-pwa')
+
+module.exports = withPWA({
+    pwa: {
+        disable: process.env.NODE_ENV === 'development',
+        dest: 'public'
+    },
+    images: {
+        domains: ['media-exp1.licdn.com', 'www.nonceblox.com']
+    }
+})
