@@ -1,11 +1,15 @@
-const withPWA = require('next-pwa')
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ["localhost"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+        port: "",
+      },
+    ],
+  },
+};
 
-module.exports = withPWA({
-    pwa: {
-        disable: process.env.NODE_ENV === 'development',
-        dest: 'public'
-    },
-    images: {
-        domains: ['media-exp1.licdn.com', 'www.nonceblox.com']
-    }
-})
+module.exports = nextConfig;
