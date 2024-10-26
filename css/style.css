@@ -9,23 +9,112 @@
   font-weight: normal;
   font-style: normal;
 }
-/* =======================================================
-  *
-  * 	Template Style 
-  *
-  * ======================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --bg-color-initial: #ff9000;
+  --bg-color: #fff;
+  --color-initial: #fff;
+  --color: #4d4d4d;
+
+  --bg-color-initial-dark: #b96b04;
+  --bg-color-dark: #262626;
+  --color-initial-dark: #262626;
+  --color-dark: #e7e6e6;
+}
+
 body {
   font-family: "Space Mono", Arial, serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #4d4d4d;
-  background: #fff;
+  color: var(--color);
+  background: var(--bg-color);
 }
+/* Light Mode */
+body.light-mode {
+  background: var(--bg-color);
+  color: var(--color);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: var(--bg-color-dark);
+  color: var(--color-dark);
+}
+
 svg {
   -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
   filter: invert(100%);
 }
+/* Dark mode Toggle Button */
+.slide-toggle {
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 3px;
+}
+.slide-toggle input:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+/* .slide-toggle input:first-of-type:focus ~ label {
+  box-shadow: 0 0 0 6px rgba(255, 0, 0, 0.15);
+} */
+.slide-toggle input:first-of-type:checked ~ label {
+  color: #fff;
+  background-color: #e37f04;
+}
+.slide-toggle input:first-of-type:checked ~ label:after {
+  transform: translateX(100%);
+}
+.slide-toggle input:first-of-type:disabled ~ label {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.slide-toggle label:first-of-type {
+  display: flex;
+  height: 2rem;
+  width: 4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  color: #777;
+  background-color: #ddd;
+  border-radius: 3px;
+  transition: background-color 0.25s ease, box-shadow 0.15s ease,
+    color 0.25s ease;
+}
+.slide-toggle label:first-of-type:hover {
+  border-color: #777;
+  box-shadow: 0 0 0 6px rgba(225, 0, 0, 0.15);
+}
+.slide-toggle label:first-of-type:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  bottom: 7px;
+  left: 2px;
+  right: 50%;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: transform 0.25s cubic-bezier(0.6, 0.82, 0, 0.76);
+}
+/* .slide-toggle label:first-of-type:hover {
+  box-shadow: 0 0 0 6px rgba(225, 0, 0, 0.15);
+} */
+.slide-toggle label:first-of-type div {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -54,7 +143,7 @@ svg {
 }
 
 a {
-  color: #ff9000;
+  color: var(--bg-color-initial);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -62,7 +151,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #ff9000;
+  color: var(--bg-color-initial);
   outline: none;
   text-decoration: none;
 }
@@ -78,7 +167,7 @@ h4,
 h5,
 h6,
 figure {
-  color: #000;
+  color: inherit;
   font-family: "Space Mono", Arial, serif;
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -86,17 +175,17 @@ figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #ff9000;
+  background: var(--bg-color-initial);
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #ff9000;
+  background: var(--bg-color-initial);
 }
 
 ::selection {
   color: #fff;
-  background: #ff9000;
+  background: var(--bg-color-initial);
 }
 
 #prk-header,
@@ -239,7 +328,7 @@ figure {
 }
 
 #prk-features {
-  background: #ff9000;
+  background: var(--bg-color-initial);
 }
 #prk-features h2 {
   color: #fff;
@@ -274,7 +363,7 @@ figure {
   display: table-cell;
   vertical-align: middle;
   height: 100px;
-  color: #ff9000 !important;
+  color: var(--bg-color-initial) !important;
 }
 #prk-features .feature-left .feature-copy {
   width: 100%;
@@ -329,7 +418,7 @@ figure {
   background: #ff9000;
 }
 .prk-bg-dark .prk-heading h2 {
-  color: #fff !important;
+  color: var(--color-initial) !important;
 }
 
 .info {
@@ -499,7 +588,7 @@ figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #ff9000;
+  color: var(--bg-color-initial);
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -536,7 +625,7 @@ figure {
   font-size: 20px;
 }
 #prk-about .prk-social-icons li a:hover {
-  background: #ff9000;
+  background: var(--bg-color-initial);
 }
 
 .prk-heading {
@@ -549,7 +638,7 @@ figure {
   font-size: 40px;
   margin-bottom: 20px;
   line-height: 1.5;
-  color: #000;
+  color: inherit;
 }
 .prk-heading p {
   font-size: 18px;
@@ -601,7 +690,7 @@ figure {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: bold;
-  background: #e6e6e6;
+  background: inherit;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -667,7 +756,7 @@ figure {
   top: 40px;
   left: 50%;
   margin-left: -21px;
-  background-color: #ff9000;
+  background-color: var(--bg-color-initial);
   z-index: 100;
   display: table;
   -webkit-border-radius: 50%;
@@ -926,17 +1015,17 @@ figure {
   margin-bottom: 0;
 }
 #prk-started .prk-heading h2 {
-  color: #fff;
+  color: inherit;
   margin-bottom: 20px !important;
 }
 #prk-started .prk-heading p {
-  color: rgba(255, 255, 255, 0.8);
+  color: inherit;
 }
 #prk-started .btn {
   height: 54px;
   border: none !important;
-  background: #fff;
-  color: #ff9000;
+  background: var(--bg-color);
+  color: var(--color);
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
@@ -1254,9 +1343,9 @@ input[type="text"] {
 }
 
 .btn-primary {
-  background: #ff9000;
+  background: var(--bg-color-initial);
   color: #fff;
-  border: 2px solid #ff9000;
+  border: 2px solid var(--bg-color-initial);
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1266,13 +1355,13 @@ input[type="text"] {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #ff9000;
-  border: 2px solid #ff9000;
+  color: var(--bg-color-initial);
+  border: 2px solid var(--bg-color-initial);
 }
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-  background: #ff9000;
+  background: var(--bg-color-initial);
   color: #fff;
 }
 
@@ -1421,7 +1510,7 @@ input[type="text"] {
 .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #ff9000;
+  border-color: var(--bg-color-initial);
 }
 
 .row-pb-md {

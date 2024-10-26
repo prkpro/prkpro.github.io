@@ -23,6 +23,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css">
@@ -60,6 +61,17 @@
                     <a href="#prk-work" class="nav-item nav-link">Work</a>
                     <a href="#prk-blog" class="nav-item nav-link">Blog</a>
                     <a href="#prk-started" class="nav-item nav-link">Contact</a>
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+                    <div class="slide-toggle">
+                        <input id="guidLater" type="checkbox" checked onchange="toggleTheme(this.checked)" />
+                        <label for="guidLater">
+                            <div><i class="fas fa-sun"></i></div>
+                            <div><i class="fas fa-moon"></i></div>
+                        </label>
+                    </div>
+
+                    <!-- <div id="output" style="margin-top: 1rem"></div> -->
                 </div>
             </div>
         </div>
@@ -150,10 +162,10 @@
                             instruments, and of course, cracking jokes.</p>
 
                     </div>
-                    <div class="col-md-8 text-center col-md-offset-2">
-                        <p id="chucknorris" style="margin-bottom:0;"><em></em>
+                    <!-- <div class="col-md-8 text-center col-md-offset-2">
+                        <p id="chucknorris" style="margin-bottom:0; color:beige;"><em></em>
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -167,12 +179,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-md-offset-0">
+                        <div class="timeline-heading text-center animate-box">
+                            <h3>Work Experience</h3>
+                        </div>
                         <ul class="timeline">
-                            <li class="timeline-heading text-center animate-box">
-                                <div>
-                                    <h3>Work Experience</h3>
-                                </div>
-                            </li>
                             <li class="animate-box timeline-unverted">
                                 <div class="timeline-badge"><i class="icon-suitcase"></i></div>
                                 <div class="timeline-panel">
@@ -227,26 +237,13 @@
                                     </div>
                                 </div>
                             </li>
-
                             <br>
-                            <li class="timeline-heading text-center animate-box">
-                                <div>
-                                    <h3>Education</h3>
-                                </div>
-                            </li>
-                            <!-- <li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Masters Degree</h3>
-										<span class="company">University Name - 2007 - 2009</span>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at
-											the coast of the Semantics, a large language ocean.</p>
-									</div>
-								</div>
-							</li> -->
+                        </ul>
+                        <br>
+                        <div class="timeline-heading text-center animate-box">
+                            <h3>Education</h3>
+                        </div>
+                        <ul class="timeline">
                             <li class="animate-box timeline-unverted">
                                 <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
                                 <div class="timeline-panel">
@@ -271,19 +268,6 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- <li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Graduation</h3>
-										<span class="company">College Name - 1994 - 1998</span>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts.</p>
-									</div>
-								</div>
-							</li> -->
                         </ul>
                     </div>
                 </div>
@@ -707,9 +691,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div><span class="increased-spl" margin-bottom="-20px">&copy;</span>
-                            2024 prkpro.github.io - All Rights Reserved.
-                        </div>
+                        <footer>
+                            <h2 style="display: inline;">&copy;</h2>
+                            <div style="display: inline; vertical-align: 11px;">2024 prkpro.github.io - All rights
+                                reserved.</div>
+                        </footer>
+                        <!-- <div>
+                            <p>&copy; 2024 prkpro.github.io - All rights reserved.</p>
+                        </div> -->
                     </div>
                 </div>
             </div>
