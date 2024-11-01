@@ -28,13 +28,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: var(--color);
-  background: var(--bg-color);
-}
-/* Light Mode */
-body.light-mode {
   background: var(--bg-color);
   color: var(--color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark Mode */
@@ -335,7 +331,13 @@ figure {
 }
 #prk-features .services-padding {
   padding: 7em 0;
+  /* background: var(--bg-color); */
+  color: var(--color);
 }
+/* .dark-mode {
+  background: var(--bg-color-dark);
+  color: var(--color-dark);
+} */
 #prk-features .feature-left {
   margin-bottom: 40px;
   float: left;
@@ -351,7 +353,8 @@ figure {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background: #fff;
+  /* background: var(--bg-color-dark); */
+  /* color: inherit; */
   margin-bottom: 20px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -363,7 +366,7 @@ figure {
   display: table-cell;
   vertical-align: middle;
   height: 100px;
-  color: var(--bg-color-initial) !important;
+  /* color: var(--bg-color-initial-dark) !important; */
 }
 #prk-features .feature-left .feature-copy {
   width: 100%;
@@ -479,7 +482,7 @@ figure {
 
   .navbar.nav-sticky {
     padding: 10px 60px;
-    background: #ffffff !important;
+    background: inherit !important;
   }
 
   .navbar .navbar-brand {
@@ -506,7 +509,8 @@ figure {
 
   .navbar-light.nav-sticky .navbar-nav .nav-link,
   .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
-    color: #414141;
+    /* color: #414141; */
+    color: inherit;
   }
 
   .navbar-light .navbar-nav .nav-link:hover,
